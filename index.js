@@ -12,7 +12,7 @@ const socket = require('socket.io'),
 
 const __PORT = 3001;
 const app = express();
-const http_server = https.createServer(app);
+const http_server = http.createServer(app);
 const io = socket(http_server);
 
 app.use(cors());
