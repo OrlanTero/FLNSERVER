@@ -10,7 +10,7 @@ const socket = require('socket.io'),
 // logger.info('Socket > Listening on port');
 
 
-const __PORT = 3001;
+const __PORT = 3005;
 const app = express();
 const http_server = http.createServer(app);
 
