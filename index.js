@@ -13,6 +13,7 @@ const socket = require('socket.io'),
 const __PORT = 3001;
 const app = express();
 const http_server = http.createServer(app);
+
 const io = socket(http_server);
 
 app.use(cors());
@@ -21,6 +22,7 @@ http_server.listen(__PORT);
 
 function start() {
     io.sockets.on('connection', function (socket) {
+        console.log("Connected");
         socket.on("message", function (data) {
             console.log(data)
             io.emit("message", data);
